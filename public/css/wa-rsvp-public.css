@@ -1,0 +1,286 @@
+.wedding-rsvp-form {
+    --primary-color: #c678ac;
+    --secondary-color: #293f2d;
+    --text-color: #484848;
+    --border-color: #dddddd;
+    --space: 30px;
+    --space-md: 15px;
+
+    background-color: #fff;
+    border-radius: 5px;
+    color: var(--text-color);
+    /* padding: var(--space); */
+    /* border: 1px solid var(--border-color); */
+    /* box-shadow: 0 0px 15px 5px rgba(0, 0, 0, 0.05); */
+}
+
+.form-control h4 {
+    margin-bottom: 15px;
+}
+
+.input-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: var(--space);
+}
+
+.wedding-rsvp-form .form-control input,
+.wedding-rsvp-form .form-control textarea,
+.wedding-rsvp-form .form-control select {
+    outline: none;
+    border: 1px solid var(--border-color);
+    padding: 8px 15px;
+    border-radius: 3px;
+    background: #fff;
+    color: #757575;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.wedding-rsvp-form .form-control textarea {
+    resize: vertical;
+}
+
+.wedding-rsvp-form .form-control {
+    margin-bottom: var(--space-md);
+}
+
+.wedding-rsvp-form input[type='text'],
+.wedding-rsvp-form input[type='number'],
+.wedding-rsvp-form textarea,
+.wedding-rsvp-form select,
+.wedding-rsvp-form input[type='date'] {
+    width: 100%;
+}
+
+.wedding-rsvp-form input[type='text']:focus,
+.wedding-rsvp-form textarea:focus {
+    border-color: var(--text-color);
+}
+
+.wedding-rsvp-form .form-control label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    gap: 5px;
+}
+
+.required-symbol {
+    color: var(--primary-color);
+    font-size: 16px;
+    line-height: 1;
+}
+
+.checkbox-group input[type='checkbox'] {
+    display: none;
+}
+
+.checkbox-group label {
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox-group label:before {
+    content: '';
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    padding: 8px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+.checkbox-group input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 7px;
+    width: 4px;
+    height: 10px;
+    border: solid var(--primary-color);
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Custom radio button */
+.wedding-rsvp-form [type='radio']:checked,
+.wedding-rsvp-form [type='radio']:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+.wedding-rsvp-form [type='radio']:checked + label,
+.wedding-rsvp-form [type='radio']:not(:checked) + label {
+    position: relative;
+    padding-left: 26px;
+    cursor: pointer;
+    line-height: var(--space-md);
+    display: inline-block;
+    margin-bottom: var(--space-md);
+}
+.wedding-rsvp-form [type='radio']:checked + label:before,
+.wedding-rsvp-form [type='radio']:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--primary-color);
+    border-radius: 100%;
+    background: #fff;
+}
+.wedding-rsvp-form [type='radio']:checked + label:after,
+.wedding-rsvp-form [type='radio']:not(:checked) + label:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: var(--primary-color);
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.wedding-rsvp-form [type='radio']:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+}
+.wedding-rsvp-form [type='radio']:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+/* Custom Radio CSS end */
+
+.input-group > .form-control {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.guests-info-container {
+    border: 1px solid var(--border-color);
+    padding: var(--space);
+    border-radius: 5px;
+    margin: var(--space) 0;
+}
+
+.guests-info-container .input-group:last-child .form-control {
+    margin-bottom: 0;
+}
+
+.wedding-rsvp-form .title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: var(--space-md);
+}
+
+.rsvp-submit {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: var(--space-md);
+    cursor: pointer;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    min-width: 188px;
+}
+
+/* spin the svg  */
+.rsvp-submit svg {
+    animation: spin 1s linear infinite;
+}
+
+.rsvp-submit svg path {
+    opacity: 0.8;
+}
+.rsvp-submit svg circle {
+    opacity: 0.35;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.field-error {
+    border-color: #dc3545 !important;
+    background-color: #fff8f8;
+}
+
+.response-message {
+    border: 1px solid var(--border-color);
+    border-left-width: 3px;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    display: none;
+}
+
+.response-message.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    border-left-color: #c62c3a;
+}
+
+.response-message.success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    border-left-color: #165724;
+}
+
+/* Add new guest button css  */
+.add-new-guest-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: navajowhite;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background: #04aa6d;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+    .input-group {
+        flex-direction: column;
+        gap: 0;
+    }
+}

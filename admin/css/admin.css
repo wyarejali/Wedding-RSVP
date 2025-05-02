@@ -1,0 +1,66 @@
+.wedding-rsvp-details {
+    --success: #00b82f;
+    --danger: #aa0000;
+    --view: #201d1e;
+    --download: #009900;
+    --space: 30px;
+    --primary-color: #8e7552;
+    --hover-color: #a1835a;
+    --border-color: #dcd7d7;
+}
+
+.wedding-rsvp-details table {
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.wedding-rsvp-details table th,
+.wedding-rsvp-details table td {
+    border: 1px solid var(--border-color);
+    padding: 12px 20px;
+}
+
+tr.section th,
+tr.section td {
+    border: none;
+    padding-left: 0;
+    padding-top: var(--space);
+}
+
+.wedding-rsvp-details {
+    display: flex;
+    gap: 30px;
+}
+
+.rsvp_submitter_details,
+.rsvp_guests_details {
+    background: #fff;
+    flex: 1;
+    padding: 30px;
+    border: 1px solid var(--border-color);
+}
+
+.wedding-rsvp-details h3 {
+    margin: 0 0 20px 0;
+}
+
+.attending,
+.not-attending {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+}
+.attending {
+    color: var(--success);
+}
+.not-attending {
+    color: var(--danger);
+}
+
+@media only screen and (max-width: 850px) {
+    .wedding-rsvp-details {
+        flex-direction: column;
+    }
+}

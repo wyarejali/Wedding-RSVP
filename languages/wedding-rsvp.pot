@@ -1,0 +1,25 @@
+wedding-rsvp
+├── admin
+│   ├── class-wa-rsvp-admin.php
+│   ├── class-wa-rsvp-list-table.php
+│   ├── views
+│   │   ├── submission-details.php
+│   │   └── submissions-list.php
+│   └── js
+│       └── admin.js
+├── includes
+│   ├── class-wa-rsvp-activator.php
+│   ├── class-wa-rsvp-deactivator.php
+│   ├── class-wa-rsvp.php
+│   └── class-wa-rsvp-loader.php
+├── public
+│   ├── class-wa-rsvp-public.php
+│   ├── js
+│   │   └── wa-rsvp-form.js
+│   └── templates
+│       └── form-template.php
+├── languages
+│   └── wedding-rsvp.pot
+├── wedding-rsvp.php
+├── uninstall.php
+└── README.md
