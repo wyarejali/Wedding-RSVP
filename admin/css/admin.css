@@ -59,6 +59,11 @@ tr.section td {
     color: var(--danger);
 }
 
+#export-all-guests {
+    display: flex;
+    align-items: center;
+}
+
 @media only screen and (max-width: 850px) {
     .wedding-rsvp-details {
         flex-direction: column;

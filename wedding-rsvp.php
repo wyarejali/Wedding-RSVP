@@ -3,7 +3,7 @@
  * Plugin Name: Wedding RSVP
  * Plugin URI: https://divinationkit.com/plugins/wedding-rsvp
  * Description: A simple wedding RSVP management system. Use this shortcode [wedding_rsvp_form] to display the RSVP form.
- * Version: 1.0.0
+ * Version: 1.0.2
  * Author: Wyarej Ali
  * Author URI: https://divinationkit.com
  * Text Domain: wa_rsvp
@@ -16,7 +16,7 @@ if ( !defined( 'WPINC' ) ) {
     die;
 }
 
-define( 'WA_RSVP_VERSION', '1.0.0' );
+define( 'WA_RSVP_VERSION', '1.0.2' );
 define( 'WA_RSVP_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WA_RSVP_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 

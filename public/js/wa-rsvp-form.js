@@ -116,7 +116,7 @@ jQuery(document).ready(function ($) {
                 console.log('Response:', response); // Debug point 3
                 if (response.success) {
                     // Optionally, you can clear the form fields here or hide the form or redirect
-                    // $form[0].reset();
+                    $form[0].reset();
                     // $form.slideUp();
                     $message
                         .html(response.data)

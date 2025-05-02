@@ -51,6 +51,53 @@ jQuery(document).ready(function ($) {
         }, 2000);
     });
 
+    // Export all guests
+    $('#export-all-guests').on('click', function (e) {
+        e.preventDefault();
+        const $button = $(this);
+
+        // Change button text and add loading state
+        const $originalContent = $button.html();
+        $button
+            .html(
+                '<span class="dashicons dashicons-update spin"></span> Exporting...'
+            )
+            .prop('disabled', true);
+
+        // Create form for download
+        const $form = $('<form>', {
+            method: 'POST',
+            action: wa_rsvp_admin.ajax_url,
+        });
+
+        // Add form fields
+        $form.append(
+            $('<input>', {
+                type: 'hidden',
+                name: 'action',
+                value: 'wa_rsvp_export_all_guests',
+            })
+        );
+
+        $form.append(
+            $('<input>', {
+                type: 'hidden',
+                name: 'nonce',
+                value: wa_rsvp_admin.nonce,
+            })
+        );
+
+        // Add form to body and submit
+        $('body').append($form);
+        $form.submit();
+        $form.remove();
+
+        // Reset button after a short delay
+        setTimeout(() => {
+            $button.html($originalContent).prop('disabled', false);
+        }, 2000);
+    });
+
     // Delete RSVP submission
     $('.delete-submission').on('click', function (e) {
         e.preventDefault();

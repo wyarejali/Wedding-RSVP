@@ -30,6 +30,8 @@ class WA_RSVP {
 
         // Export submissions to Excel with ajax
         $this->loader->add_action( 'wp_ajax_wa_rsvp_export_submission', $plugin_admin, 'export_submission' );
+
+        $this->loader->add_action( 'wp_ajax_wa_rsvp_export_all_guests', $plugin_admin, 'export_all_guests' );
     }
 
     private function define_public_hooks() {
